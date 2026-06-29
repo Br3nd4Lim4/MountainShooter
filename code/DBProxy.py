@@ -10,9 +10,7 @@ class DBProxy:
                                    id INTEGER PRIMARY KEY AUTOINCREMENT,
                                    name TEXT NOT NULL,
                                    score INTEGER NOT NULL,
-                                   date TEXT NOT NULL)
-                                '''
-                                )
+                                   date TEXT NOT NULL)''')
 
     def save(self, score_dict: dict):
         self.connection.execute('INSERT INTO dados (name, score, date) VALUES (:name, :score, :date)', score_dict)
